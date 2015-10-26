@@ -1,0 +1,39 @@
+\documentclass{book}
+
+\input{../packages.tex}
+\input{../cite_as_appendix.tex}
+
+\author{Daniel Sank}
+\title{Book}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+
+\chapter{Introduction}
+
+This is a book about quantum computing.
+
+\section{Sub-introduction}
+
+Quantum computing is cool.
+
+\section{Sub-introduction II}
+
+No really, it's super cool.
+
+
+\chapter{Science!}
+
+To understand superconducting qubits, you should read \mycitetype \mycite{qubits} and \mycitetype \mycite{iq_mixer}.
+
+
+\begin{appendix}
+\subimport*{../iq-mixer/}{as-appendix}
+\subimport*{../qubits/}{as-appendix}
+\end{appendix}
+
+\end{document}
