@@ -8,12 +8,11 @@
 \makeatletter
 \newcounter{currentimportdepth}
 \setcounter{currentimportdepth}{0}
-\newcommand{\subimportlevel}[3]{
+\newcommand{\subimportlevel}[2]{
   \expandafter\edef\csname @currentlevel\thecurrentimportdepth\endcsname{\thecurrentlevel}
   \addtocounter{currentimportdepth}{1}
-  \addtocounter{currentlevel}{-#3}
+  \addtocounter{currentlevel}{-1}
   \subimport*{#1}{#2}
-  \addtocounter{currentlevel}{#3}
   \addtocounter{currentimportdepth}{-1}
   \setcounter{currentlevel}{\csname  @currentlevel\thecurrentimportdepth\endcsname}
 }
